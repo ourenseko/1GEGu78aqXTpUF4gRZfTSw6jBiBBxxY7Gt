@@ -7,7 +7,7 @@ Esta billetera de Bitcoin ha sido generada para imprimir en formato papel y sigu
 El original de esta "cold wallet" era unica y no llegé a realizar apuntes o fotocopias por desgracia al no estar seguro sobre la ciberseguridad tras haber sufrido un hackeo en otros monederos sin combinacion de desbloqueo, por lo que recomiendo hacerlas apresuradamente a cualquier propietario si mantiene por pequeño lapso de tiempo que sea sus activos fuera de cajas fuertes y sin supervisión (como ha acurrido en mi terrible caso). 
 
 
-He sido capaz de encontrar la llave publica siguiendo las transferencias en la blockchain, pero desconozco totalmente la llave privada... Soy consciente que en un 80% de posibilidades esta clave necesaria al estar en soporte tan frágil como es el papel estará destruida o dañada al no poder robar mi dinero de manera tan facil como se la han metido al bolsillo. 
+He sido capaz de encontrar la llave publica siguiendo las transferencias en la blockchain, pero desconozco totalmente la llave privada y soy incapaz de obtener la semilla mediante otras tres wallets generadas el mismo día con la misma entropía... Soy consciente que en un 80% de posibilidades esta clave necesaria al estar en soporte tan frágil como es el papel estará destruida o dañada al no poder robar mi dinero de manera tan facil como se la han metido al bolsillo. 
 
 Se puden observar los fondos bloqueados en el siguiente enlace:
 
