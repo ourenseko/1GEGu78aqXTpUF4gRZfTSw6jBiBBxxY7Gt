@@ -15,6 +15,4 @@ https://www.blockchain.com/es/explorer/addresses/btc/1GEGu78aqXTpUF4gRZfTSw6jBiB
 
 Puedes enviarme una carta mi apartado postal en:
 
-Manuel GB
-
 Meamán 4, Baños de molgas (32701)
