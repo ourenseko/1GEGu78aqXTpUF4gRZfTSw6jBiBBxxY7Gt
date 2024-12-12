@@ -9,7 +9,9 @@ Bitcoin cold wallet
 LOST BITCOIN WALLET
 -------------------
 KEY: 1GEGu78aqXTpUF4gRZfTSw6jBiBBxxY7Gt
+
 BTC: 0.09362600
+
 EXPLORER: https://www.blockchain.com/explorer/addresses/btc/1GEGu78aqXTpUF4gRZfTSw6jBiBBxxY7Gt
  
 CONTACT: recoverycryptocash@gmail.com
