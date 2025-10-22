@@ -3,20 +3,33 @@
 <head>
 
 	<script type="text/javascript">
-	//OPEN DEVTOOLS, THEN Select Papel wallet sectión and check Hide art for MODE RECOVERY
-	// RECOVERY TOOL v. 0.00000001
-	// SET YOUR LOST WALLET
-		const miDireccion = "1GEGu78aqXTpUF4gRZfTSw6jBiBBxxY7Gt";
-		
-			// search in scripts "papelwallet" 9969
-			// search in html "papergenerate" 6750
-		
-		//1630 securerandom.js
-		
 	
+	const miDireccion = "1GEGu78aqXTpUF4gRZfTSw6jBiBBxxY7Gt";
 	console.log("Select Papel wallet sectión and check Hide art for");
 	console.log("MODE RECOVERY: "+miDireccion);
-	// CODED 5254
+	
+	/*** RECOVERY TOOL v. 0.00000001
+		
+		OPEN DEVTOOLS AND CLICK CONSOLE, THEN... SEE IT AND CRY WITH ME :_
+		
+		search "papelwallet" X2 para ver el codigo añadido if ==
+		search "/!" para ver el codigo añadido en securerandom
+		search "papergenerate" para ver el codigo añadido Autoclick
+		
+		
+		LINE 1630 
+		
+		securerandom.js
+			line 7540
+			SecureRandom.poolCopyOnInit;
+			SecureRandom.pool;
+		
+			
+		CODED 5254
+	
+	
+	
+	***/
 	</script>
 
 	<!--
@@ -1617,17 +1630,21 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 		// cookies and storage: 1 bit
 		entropyStr += navigator.cookieEnabled + typeof (sessionStorage) + typeof (localStorage);
 		// language: ~7 bit
-		entropyStr += navigator.language;
+		entropyStr += navigator.language; 
 		// history: ~2 bit
 		entropyStr += window.history.length;
 		// location
 		entropyStr += window.location;
 
 
+/* hijacked adding our securerandom APROX... */
+		console.log("/!\\ SecureRandom.js hijacked");
+		//console.log("Natural seed: "+entropyStr);
+		
+		// Asignamos nuestra seed y sobrescribe el conjunto anterior formado +=
+		entropyStr = "2517811223866752-120Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36Chrome PDF Plugin internal-pdf-viewer Portable Document Format undefined, Chrome PDF Viewer mhjfbmdgcfjbbpaeojofohoefgiehjai undefined, application/pdf pdf, Portable Document Format application/x-google-chrome-pdf pdf, Shockwave Flash pepflashplayer.dll Shockwave Flash 27.0 r0, application/x-shockwave-flash swf, Widevine Content Decryption Module widevinecdm.dll Widevine Content Decryption Module undefined, OpenH264 Video Codec openh264.dll OpenH264 Video Codec by Cisco Systems undefined, video/webm webm, audio/webm webma, video/mp4 mp4, audio/mpeg mp3 trueobjectobjectes-ES1file:///C:/Users/Manuel/Desktop/bitaddress.org-master/bitaddress.org.html";
+		console.log("Injection seed: "+entropyStr);
 
-
-/* hijacked adding our securerandom*/
-var entropyStr = "2517811223866752-60Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36Chrome PDF Plugin internal-pdf-viewer Portable Document Format undefined, Chrome PDF Viewer mhjfbmdgcfjbbpaeojofohoefgiehjai undefined, application/pdf pdf, Portable Document Format application/x-google-chrome-pdf pdf, Shockwave Flash pepflashplayer.dll Shockwave Flash 27.0 r0, application/x-shockwave-flash swf, Widevine Content Decryption Module widevinecdm.dll Widevine Content Decryption Module undefined, OpenH264 Video Codec openh264.dll OpenH264 Video Codec by Cisco Systems undefined, video/webm webm, audio/webm webma, video/mp4 mp4, audio/mpeg mp3 trueobjectobjectes-ES1file:///C:/Users/Manuel/Desktop/bitaddress.org-master/bitaddress.org.html";
 
 
 		var entropyBytes = Crypto.SHA256(entropyStr, { asBytes: true });
@@ -7529,15 +7546,20 @@ ninja.publicKey = {
 		}
 	},
 
+
+/// MUESTRA EN EL PANEL LA SEMILLA HEX QUE SE FORMA CON EL MOVIMIENTO DEL RATON O TEXTO.
 	showPool: function () {
 		var poolHex;
+		
 		if (SecureRandom.poolCopyOnInit != null) {
-			poolHex = Crypto.util.bytesToHex(SecureRandom.poolCopyOnInit);
+			//poolHex = Crypto.util.bytesToHex(SecureRandom.poolCopyOnInit); /// mostramos tal cual el array, sin pasar a hexadecimal
+			poolHex = SecureRandom.poolCopyOnInit;
 			document.getElementById("seedpool").innerHTML = poolHex;
 			document.getElementById("seedpooldisplay").innerHTML = poolHex;
 		}
 		else {
-			poolHex = Crypto.util.bytesToHex(SecureRandom.pool);
+			//poolHex = Crypto.util.bytesToHex(SecureRandom.pool); /// mostramos tal cual el array, sin pasar a hexadecimal
+			poolHex = SecureRandom.pool;
 			document.getElementById("seedpool").innerHTML = poolHex;
 			document.getElementById("seedpooldisplay").innerHTML = poolHex;
 		}
@@ -10016,12 +10038,12 @@ ninja.wallets.paperwallet = {
 		
 		
 		
-		/* mode: papelwallet, with Bip38 */
+		/* mode: papelwallet, with Bip38 only 'Hide art' check */
 		
 			var miDireccionObtenida = bitcoinAddress+":"+privateKey;
 			console.log(miDireccionObtenida);
 			
-			if (miDireccion == bitcoinAddress){ 
+			if (miDireccion === bitcoinAddress ){ 
 				console.log("WTF!");
 				console.log(miDireccionObtenida);
 				console.log(bitcoinAddress);
@@ -10032,16 +10054,43 @@ ninja.wallets.paperwallet = {
 				const enlace = document.createElement('a');
 
 				enlace.href = URL.createObjectURL(blob);
-				enlace.download = 'Bitaddress report.txt';
+				enlace.download = 'Bitaddress_WTF.txt';
 				enlace.click();
 				
 				exit;
 			}else{
 				
 				// search in html "papergenerate"  autoclick-button
+				
+				
+				
+							
+				//UN PEQUEÑO CODIGO PARA SABER SI DUPLICAN DIRECCIONES
+				// Lista de direcciones BTC generadas y escogidas al azar.
+				const listabtc = [
+				  "1EYra9hviQUB9m3mJEzQNJCXwD1e9DcYfJ",
+				  "18TAWfSBfiyvhJJDc7euy7L9M3GPrAqA2A",
+				  "18oEsRvvRhgw1igkvJBmPSgv2kSjEApgW4"
+				];
+				// Recorrer la lista
+				for (const direccion of listabtc) {
+				  if (direccion === bitcoinAddress) {
+					console.log("Esto se está repetiendo.");
+					const contenido = "Esto se está repetiendo."; //Este es el contenido del archivo
+					const blob = new Blob([contenido], { type: 'text/plain' });
+					const enlace = document.createElement('a');
+
+					enlace.href = URL.createObjectURL(blob);
+					enlace.download = 'Bitaddress_info.txt';
+					enlace.click();
+				  }
+				}
+				
+				
+				
 			}
-			
 			/* /mode: papelwallet, with Bip38 */
+			
 		
 	},
 
