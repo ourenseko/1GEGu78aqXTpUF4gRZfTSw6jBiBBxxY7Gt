@@ -9,6 +9,7 @@ Bitcoin cold wallet
 LOST BITCOIN WALLET
 -------------------
 PUB KEY: 1GEGu78aqXTpUF4gRZfTSw6jBiBBxxY7Gt
+
 PRIV KEY: 6P ... {ROBADO}
 
 BTC: 0.09362600
